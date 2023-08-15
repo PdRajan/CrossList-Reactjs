@@ -23,18 +23,21 @@ body{
   height: 100vh;
   width: 100%;
   max-width: 500px;
-  border: 1px solid mediumblue;
+  border: 1px solid slategrey;
   margin: auto;
+  /* border-radius: 20px;
+  overflow: hidden; */
 }
 
 header{
   width: 100%;
-  padding: 0 0 .25em;
-  background-color: mediumblue;
+  padding: 0.25rem 0;
+  background-color: rgb(69, 79, 90);
   color: aliceblue;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+    
 }
 
 main{
@@ -42,15 +45,16 @@ main{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow-y: auto;
+  background-color: rgba(246, 246, 246, 0.393);
 }
 
 footer{
   width: 100%;
   padding: 0.25em;
-  background-color: mediumblue;
+  background-color: rgb(69, 79, 90);
   color: aliceblue;
   display: grid;
   place-content: center;
@@ -112,5 +116,74 @@ item:first-child{
 .item svg:focus,
 .item svg:hover{
   color: red;
+  outline: none;
+}
+
+
+.addForm{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border: 1px solid #eee;
+}
+
+.addForm label{
+  position: absolute;
+  left: -99999px;
+}
+
+.addForm input[type='text']{
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+button{
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: rgb(69, 79, 90);
+  cursor: pointer;
+}
+
+button:focus,
+button:hover{
+  color: white;
+  background-color: limegreen;
+  outline: none;
+   
+}
+
+.searchForm{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.25rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border: 1px solid #eee;
+}
+
+.searchForm label{
+  position: absolute;
+  left: -99999px;
+}
+
+.searchForm input[type='text']{
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
   outline: none;
 }
